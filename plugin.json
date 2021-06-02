@@ -1,0 +1,12 @@
+{
+  "author": "Geoffrey Hutchison",
+  "version": 1.0,
+  "url": "https://github.com/ghutchis/avogadro-build-ase",
+  "name": "avogadro-build-ase",
+  "description": "Generate materials using ASE",
+  "type": "commands",
+  "commands": [
+    { "name": "TMDC", "command": "mx2.py" },
+    { "name": "Nanoribbon", "command": "ribbon.py" }
+  ]
+}
