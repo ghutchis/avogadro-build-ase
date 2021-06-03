@@ -9,7 +9,7 @@ import argparse
 import json
 import sys
 import os
-from random import randrange
+import tempfile
 
 import ase.io
 from ase.build import graphene_nanoribbon
@@ -47,13 +47,15 @@ def generate(opts):
         type = 'zigzag'
 
     atoms = graphene_nanoribbon(n, m, type)
-    # need a better random temporary name
-    name = 'temp{}.xyz'.format(randrange(32768))
+    # secure tempfile name ending in ".xyz" in a writable tmpdir
+    fd, name = tempfile.mkstemp(".xyz")
+    os.close(fd) # don't need the filehandle
+
     ase.io.write(name, atoms, format="xyz")
 
     with open(name) as f:
         xyzData = f.read()
-    #os.remove(name)
+    os.remove(name)
 
     return xyzData
 
