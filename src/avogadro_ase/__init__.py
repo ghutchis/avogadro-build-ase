@@ -28,6 +28,9 @@ def main():
         case "nanotube":
             from .nanotube import run
             output = run(avo_input)
+        case "slab":
+            from .slab import run
+            output = run(avo_input)
 
     if output is not None:
         print(json.dumps(output))

@@ -13,14 +13,15 @@ from ase.build import mx2 as ase_mx2
 
 
 def generate(opts):
-    a = int(opts['a'])
-    b = int(opts['b'])
-    c = int(opts['c'])
-    metal = opts['metal']
-    s = opts['s']
-    formula = f"{metal}{s}2"
+    options = opts.get("options", {})
+    a = int(options['a'])
+    b = int(options['b'])
+    c = int(options['c'])
+    metal = options['metal']
+    anion = options['s']
+    formula = f"{metal}{anion}2"
 
-    atoms = ase_mx2(formula, opts['kind'], size=(a, b, c))
+    atoms = ase_mx2(formula, options['kind'], size=(a, b, c))
 
     fd, name = tempfile.mkstemp(".xyz")
     os.close(fd)

@@ -13,9 +13,10 @@ from ase.build import graphene_nanoribbon
 
 
 def generate(opts):
-    m = int(opts['m'])
-    n = int(opts['n'])
-    ribbon_type = 'zigzag' if 'zig' in opts['type'].lower() else 'armchair'
+    options = opts.get("options", {})
+    m = int(options['m'])
+    n = int(options['n'])
+    ribbon_type = 'zigzag' if 'zig' in options['type'].lower() else 'armchair'
 
     atoms = graphene_nanoribbon(n, m, ribbon_type)
 
