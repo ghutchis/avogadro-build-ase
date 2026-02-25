@@ -1,0 +1,40 @@
+[project]
+name = "avogadro-ase"
+version = "0.1.0"
+description = "Generate materials structures for Avogadro 2 using ASE"
+authors = [{name = "Geoff Hutchison", email = "geoff.hutchison@gmail.com"}]
+license = "BSD-3-Clause"
+dependencies = ["ase>=3.27.0,<4"]
+requires-python = ">= 3.11"
+
+[project.scripts]
+avogadro-ase = "avogadro_ase:main"
+
+[build-system]
+build-backend = "uv_build"
+requires = ["uv_build>=0.10.2,<0.11.0"]
+
+[tool.avogadro]
+minimum-avogadro-version = "1.103"
+
+[[tool.avogadro.menu-commands]]
+identifier = "mx2"
+path.menu = "Build"
+path.submenu.label = "Insert"
+path.item.label = "Metal Dichalcogenide..."
+user-options = "src/avogadro_ase/mx2-options.json"
+
+[[tool.avogadro.menu-commands]]
+identifier = "ribbon"
+path.menu = "Build"
+path.submenu.label = "Insert"
+path.item.label = "Nanoribbon..."
+user-options = "src/avogadro_ase/ribbon-options.json"
+
+[[tool.avogadro.menu-commands]]
+identifier = "nanotube"
+path.menu = "Build"
+path.submenu.label = "Insert"
+path.item.label = "Nanotube..."
+user-options = "src/avogadro_ase/nanotube-options.json"
+

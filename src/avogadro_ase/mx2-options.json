@@ -1,0 +1,8 @@
+{
+    "a": {"type": "integer", "label": "Width", "minimum": 1, "default": 3},
+    "b": {"type": "integer", "label": "Length", "minimum": 1, "default": 3},
+    "c": {"type": "integer", "label": "Layers", "minimum": 1, "default": 1},
+    "kind": {"label": "Kind", "type": "stringList", "default": 0, "values": ["2H", "1T"]},
+    "metal": {"label": "Metal", "type": "stringList", "default": 0, "values": ["Mo", "W"]},
+    "s": {"label": "Anion", "type": "stringList", "default": 0, "values": ["S", "Se", "Te"]}
+}

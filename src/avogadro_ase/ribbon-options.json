@@ -1,0 +1,5 @@
+{
+    "type": {"label": "Type", "type": "stringList", "default": 0, "values": ["Armchair", "Zigzag"], "order": 0},
+    "n": {"type": "integer", "default": 1, "order": 1},
+    "m": {"type": "integer", "default": 1, "order": 2}
+}

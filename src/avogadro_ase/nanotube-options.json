@@ -1,0 +1,7 @@
+{
+    "n": {"type": "integer", "label": "n", "minimum": 0, "default": 6, "order": 0},
+    "m": {"type": "integer", "label": "m", "minimum": 0, "default": 6, "order": 1},
+    "length": {"type": "integer", "label": "Length", "minimum": 1, "default": 1, "order": 2},
+    "bond": {"type": "float", "label": "Bond Length (Å)", "minimum": 0.5, "default": 1.42, "order": 3},
+    "symbol": {"type": "string", "label": "Element", "default": "C", "order": 4}
+}
