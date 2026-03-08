@@ -7,7 +7,7 @@ import sys
 
 def main():
     # Avogadro calls the plugin as:
-    #   avogadro-ase <identifier> [--lang <locale>] [--debug]
+    #   avogadro-build-ase <identifier> [--lang <locale>] [--debug]
     # with the user options JSON on stdin.
     parser = argparse.ArgumentParser()
     parser.add_argument("feature")
